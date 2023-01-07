@@ -1,24 +1,28 @@
 #include<stdio.h>
 void main()
 {
-    int n,i,j,temp,r,c;
+    int n,i,j,r,c;
     printf("Enter the order of matrix\n");
     scanf("%d%d",&r,&c);
-    int a[r][c];
+    int a[r][c],temp;
+    char ch[1];
     if(r==c)
     {
         n=r;
         for(i=0;i<n;i++)
+        {
             for(j=0;j<n;j++)
             {
                 printf("A[%d][%d]=",i+1,j+1);
-                scanf("%d",&a[i][j]);
-            }   
+                scanf("%s",ch);
+                a[i][j]=ch[0];
+            }     
+       }   
         printf("The entered matrix is \n");
         for(i=0;i<n;i++)
         {
             for(j=0;j<n;j++)
-                printf("%d\t",a[i][j]);
+                printf("%c\t",a[i][j]);
             printf("\n");
         }
         for(i=0;i<n;i++)
@@ -31,7 +35,7 @@ void main()
         for(i=0;i<n;i++)
             {
                 for(j=0;j<n;j++)
-                     printf("%d\t",a[i][j]);
+                     printf("%c\t",a[i][j]);
                 printf("\n");
             }
     }
