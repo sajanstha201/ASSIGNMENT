@@ -9,6 +9,7 @@ void main()
     {
         int s=2*n+2;
         char a[n][n],sum[s];
+        //input matrix value 
         for(i=0;i<n;i++)
         {  
             for(j=0;j<n;j++)
@@ -19,6 +20,7 @@ void main()
         }
         for(i=0;i<s;i++)
             sum[i]=0;
+        //main logic to find sum of each row, column and diagonal
         for(i=0;i<n;i++)
         {
             for(j=0;j<n;j++)
@@ -31,7 +33,10 @@ void main()
                     sum[s-1]=sum[s-1]+a[i][n-j-1];
                 }
             }
+            if(sum[i]!=sum[i+n])
+                break;
         }
+        //checking whether all sum is equal to a constant or not
         for(i=0;i<s;i++)
         {
             if(sum[0]!=sum[i])
