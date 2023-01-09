@@ -10,14 +10,12 @@ void main()
     {
         n=r;
         for(i=0;i<n;i++)
-        {
             for(j=0;j<n;j++)
             {
                 printf("A[%d][%d]=",i+1,j+1);
                 scanf("%s",ch);
                 a[i][j]=ch[0];
-            }     
-       }   
+            }       
         printf("The entered matrix is \n");
         for(i=0;i<n;i++)
         {
